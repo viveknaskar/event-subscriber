@@ -1,4 +1,4 @@
-package com.viveknaskar.eventsubscriber.eventsubscriber;
+package com.viveknaskar.eventsubscriber;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -9,7 +9,5 @@ public class EventSubscriberApplication {
 	public static void main(String[] args) {
 		SpringApplication.run(EventSubscriberApplication.class, args);
 	}
-
-
 
 }

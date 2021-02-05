@@ -12,7 +12,7 @@
 	<groupId>com.viveknaskar.eventsubscriber</groupId>
 	<artifactId>event-subscriber</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>event-subscriber</name>
+	<name>Event Subscriber</name>
 	<description>Spring Boot Application with Google Cloud Platform's PubSub service</description>
 
 	<properties>
