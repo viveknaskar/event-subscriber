@@ -4,10 +4,10 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class EventSubscriberApplication {
+public class SubscriptionApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(EventSubscriberApplication.class, args);
+		SpringApplication.run(SubscriptionApplication.class, args);
 	}
 
 }
