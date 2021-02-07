@@ -21,7 +21,7 @@ public class EventSubscriberService {
             @Qualifier("pubsubInputChannel") MessageChannel inputChannel,
             PubSubTemplate pubSubTemplate) {
         PubSubInboundChannelAdapter adapter =
-                new PubSubInboundChannelAdapter(pubSubTemplate, "mysubscription");
+                new PubSubInboundChannelAdapter(pubSubTemplate, "pubsubdemoSubscription");
         adapter.setOutputChannel(inputChannel);
         adapter.setAckMode(AckMode.MANUAL);
 
