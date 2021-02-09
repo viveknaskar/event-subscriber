@@ -1,5 +1,7 @@
 package com.viveknaskar.eventsubscriber;
 
+import lombok.Getter;
+import lombok.Setter;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.cloud.gcp.pubsub.core.PubSubTemplate;
 import org.springframework.cloud.gcp.pubsub.integration.AckMode;
@@ -7,14 +9,18 @@ import org.springframework.cloud.gcp.pubsub.integration.inbound.PubSubInboundCha
 import org.springframework.cloud.gcp.pubsub.support.BasicAcknowledgeablePubsubMessage;
 import org.springframework.cloud.gcp.pubsub.support.GcpPubSubHeaders;
 import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
 import org.springframework.integration.annotation.ServiceActivator;
 import org.springframework.integration.channel.DirectChannel;
 import org.springframework.messaging.MessageChannel;
 import org.springframework.messaging.MessageHandler;
-import org.springframework.stereotype.Service;
 
-@Service
+@Getter
+@Setter
+@Configuration
 public class EventSubscriberService {
+
+    private String subscriptionName = "pubsubdemoSubscription";
 
     /**
      *  Created an inbound channel adapter to listen to the subscription `pubsubdemoSubscription`
@@ -25,7 +31,7 @@ public class EventSubscriberService {
             @Qualifier("pubsubInputChannel") MessageChannel inputChannel,
             PubSubTemplate pubSubTemplate) {
         PubSubInboundChannelAdapter adapter =
-                new PubSubInboundChannelAdapter(pubSubTemplate, "pubsubdemoSubscription");
+                new PubSubInboundChannelAdapter(pubSubTemplate, subscriptionName);
         adapter.setOutputChannel(inputChannel);
         adapter.setAckMode(AckMode.MANUAL);
 
