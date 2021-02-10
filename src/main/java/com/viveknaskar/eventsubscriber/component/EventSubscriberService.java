@@ -1,7 +1,5 @@
-package com.viveknaskar.eventsubscriber;
+package com.viveknaskar.eventsubscriber.component;
 
-import lombok.Getter;
-import lombok.Setter;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.cloud.gcp.pubsub.core.PubSubTemplate;
 import org.springframework.cloud.gcp.pubsub.integration.AckMode;
@@ -15,8 +13,6 @@ import org.springframework.integration.channel.DirectChannel;
 import org.springframework.messaging.MessageChannel;
 import org.springframework.messaging.MessageHandler;
 
-@Getter
-@Setter
 @Configuration
 public class EventSubscriberService {
 
