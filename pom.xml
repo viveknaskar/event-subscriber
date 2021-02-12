@@ -18,6 +18,10 @@
 	<properties>
 		<java.version>11</java.version>
 		<spring-cloud-gcp.version>1.2.5.RELEASE</spring-cloud-gcp.version>
+		<sonar.exclusions>
+			**/pom.xml,
+			**/SubscriptionApplication.java
+		</sonar.exclusions>
 		<sonar.jacoco.reportPath>target/jacoco-ut.exec</sonar.jacoco.reportPath>
 	</properties>
 

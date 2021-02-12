@@ -7,7 +7,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 public class SubscriptionApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(SubscriptionApplication.class, args);
+		SpringApplication.run(SubscriptionApplication.class);
 	}
 
 }
